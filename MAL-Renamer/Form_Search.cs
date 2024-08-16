@@ -13,7 +13,7 @@ namespace MALRenamer
 {
     public partial class Form_Search : Form
     {
-        List<Jikan.SearchResult> searchResults = new List<Jikan.SearchResult> { };
+        Jikan.AnimeData[] searchResults;
 
         public int MAL_ID { get; set; }
 
@@ -27,14 +27,14 @@ namespace MALRenamer
                 return;
             }
 
-            foreach (Jikan.SearchResult result in searchResults)
+            foreach (Jikan.AnimeData result in searchResults)
             {
                 string startYear = "-";
-                if (result.StartDate != null)
+                if (result.aired.From != null)
                 {
-                    startYear = DateTime.Parse(result.StartDate, null, System.Globalization.DateTimeStyles.RoundtripKind).Year.ToString();
+                    startYear = DateTime.Parse(result.aired.From, null, System.Globalization.DateTimeStyles.RoundtripKind).Year.ToString();
                 }
-                dataGridView1.Rows.Add(result.Title, result.EpisodeCount, startYear);
+                dataGridView1.Rows.Add(result.Title, result.Episodes, startYear);
             }
         }
 
@@ -58,7 +58,7 @@ namespace MALRenamer
         private void DataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
             pictureBox1.Image = null;
-            if (e.RowIndex >= searchResults.Count)
+            if (e.RowIndex >= searchResults.Count())
             {
                 return;
             }
@@ -68,7 +68,7 @@ namespace MALRenamer
 
             using (System.Net.WebClient webClient = new System.Net.WebClient())
             {
-                using (Stream stream = webClient.OpenRead(searchResults[e.RowIndex].ImageURL))
+                using (Stream stream = webClient.OpenRead(searchResults[e.RowIndex].Images.Jpg.ImageUrl))
                 {
                     pictureBox1.Image = Image.FromStream(stream);
                 }
@@ -82,7 +82,7 @@ namespace MALRenamer
                 return;
             }
 
-            System.Diagnostics.Process.Start(searchResults[dataGridView1.SelectedRows[0].Index].URL);
+            System.Diagnostics.Process.Start(searchResults[dataGridView1.SelectedRows[0].Index].Url);
         }
 
         private void Submit()
@@ -92,7 +92,7 @@ namespace MALRenamer
                 return;
             }
 
-            this.MAL_ID = searchResults[dataGridView1.SelectedRows[0].Index].ID;
+            this.MAL_ID = searchResults[dataGridView1.SelectedRows[0].Index].MalId;
             this.DialogResult = DialogResult.OK;
 
             Close();

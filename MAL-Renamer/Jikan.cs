@@ -6,12 +6,31 @@ using System.Threading.Tasks;
 using RestSharp;
 using RestSharp.Authenticators;
 using Newtonsoft.Json;
+using System.Windows.Forms;
 
 namespace MALRenamer
 {
     static class Jikan
     {
-        private static readonly RestClient client = new RestClient("https://api.jikan.moe/v3/");
+        private static readonly RestClient client = new RestClient("https://api.jikan.moe/v4/");
+        private static readonly RateLimiter rateLimiter = new RateLimiter(1, 30); // Adjust the rate limiter parameters as needed
+
+        private class EpisodesResponse
+        {
+            [JsonProperty(PropertyName = "pagination")]
+            public Pagination Pageination { get; set; }
+
+            [JsonProperty(PropertyName = "data")]
+            public List<Episode> Episodes { get; set; }
+        }
+
+        public class Pagination
+        {
+            [JsonProperty(PropertyName = "last_visible_page")]
+            private int? _pageCount { get; set; }
+
+            public int LastVisiblePage { get => _pageCount ?? 1; set => _pageCount = value; }
+        }
 
         public class Episode
         {
@@ -29,75 +48,71 @@ namespace MALRenamer
             
         }
 
-        private class EpisodesList
+        private class AnimeResponse
         {
-            [JsonProperty(PropertyName = "episodes")]
-            public List<Episode> Episodes { get; set; }
-
+            [JsonProperty(PropertyName = "data")]
+            public AnimeData[] Data { get; set; }
         }
 
-        public class Picture
-        {
-            [JsonProperty(PropertyName = "large")]
-            public string Large { get; set; }
 
-            [JsonProperty(PropertyName = "small")]
-            public string Small { get; set; }
-        }
-
-        private class PicturesList
-        {
-            [JsonProperty(PropertyName = "pictures")]
-            public List<Picture> Pictures { get; set; }
-        }
-
-        public class SearchResult
+        public class AnimeData
         {
             [JsonProperty(PropertyName = "mal_id")]
-            public int ID { get; set; }
+            public int MalId { get; set; }
 
             [JsonProperty(PropertyName = "url")]
-            public string URL { get; set; }
+            public string Url { get; set; }
 
-            [JsonProperty(PropertyName = "image_url")]
-            public string ImageURL { get; set; }
+            [JsonProperty(PropertyName = "images")]
+            public Images Images { get; set; }
+
+            [JsonProperty(PropertyName = "episodes")]
+            private int? _episodeCount { get; set; }
+
+            public int Episodes { get => _episodeCount ?? 0; set => _episodeCount = value; }
 
             [JsonProperty(PropertyName = "title")]
             public string Title { get; set; }
 
-            [JsonProperty(PropertyName = "episodes")]
-            public string EpisodeCount { get; set; }
-
-            [JsonProperty(PropertyName = "start_date")]
-            public string StartDate { get; set; }
-
-            [JsonProperty(PropertyName = "end_date")]
-            public string EndDate { get; set; }
+            [JsonProperty(PropertyName = "aired")]
+            public Aired aired { get; set; }
 
             [JsonProperty(PropertyName = "synopsis")]
             public string Synopsis { get; set; }
-
-            [JsonProperty(PropertyName = "airing")]
-            public bool Airing { get; set; }
         }
 
-        private class SearchResults
+        public class Images
         {
-            [JsonProperty(PropertyName = "results")]
-            public List<SearchResult> Results { get; set; }
+            [JsonProperty(PropertyName = "jpg")]
+            public ImageInfo Jpg { get; set; }
         }
 
+        public class ImageInfo
+        {
+            [JsonProperty(PropertyName = "image_url")]
+            public string ImageUrl { get; set; }
+            // Add other image properties as needed
+        }
+
+        public class Aired
+        {
+            [JsonProperty(PropertyName = "from")]
+            public string From { get; set; }
+        }
+
+        public class AnimeGeneralInfo
+        {
+            [JsonProperty(PropertyName = "data")]
+            public GeneralInfo Data { get; set; }
+        }
 
         public class GeneralInfo
         {
-            [JsonProperty(PropertyName = "mal_id")]
-            public int ID { get; set; }
-
             [JsonProperty(PropertyName = "url")]
             public string URL { get; set; }
 
-            [JsonProperty(PropertyName = "image_url")]
-            public string ImageURL { get; set; }
+            [JsonProperty(PropertyName = "images")]
+            public Images Images { get; set; }
 
             [JsonProperty(PropertyName = "title")]
             public string Title { get; set; }
@@ -109,48 +124,67 @@ namespace MALRenamer
             public string TitleJapanese { get; set; }
 
             [JsonProperty(PropertyName = "episodes")]
-            public int EpisodeCount { get; set; }
+            private int? _episodeCount { get; set; }
 
-            [JsonProperty(PropertyName = "synopsis")]
-            public string Synopsis { get; set; }
-
-            [JsonProperty(PropertyName = "airing")]
-            public bool Airing { get; set; }
+            public int EpisodeCount { get => _episodeCount ?? 0; set => _episodeCount=value; }
         }
 
-        static public List<Episode> GetEpisodes(string animeId)
+        static public async Task<List<Episode>> GetEpisodesAsync(string animeId)
         {
-            var request = new RestRequest("anime/" + animeId + "/episodes", Method.GET);
-            var response = client.Execute(request);
-            var episodes = JsonConvert.DeserializeObject<EpisodesList>(response.Content).Episodes;
+            List<Episode> episodes = new List<Episode>();
+            int pageNum = 1;
+            int pageCount = 1;
+            while (pageNum <= pageCount)
+            {
+                await rateLimiter.DelayIfNeededAsync();
+
+                var request = new RestRequest($"anime/{animeId}/episodes", Method.Get);
+                request.AddParameter("page", pageNum);
+
+                var response = await client.ExecuteAsync(request);
+                if (!response.IsSuccessful)
+                {
+                    // Handle the error (e.g., log it, throw an exception, etc.)
+                    throw new Exception($"Request failed with status code {response.StatusCode}");
+                }
+
+                var tempResponse = JsonConvert.DeserializeObject<EpisodesResponse>(response.Content);
+                if (tempResponse == null || tempResponse.Episodes == null)
+                {
+                    // Handle unexpected response
+                    throw new Exception("Failed to deserialize response or response is null");
+                }
+
+                episodes.AddRange(tempResponse.Episodes);
+
+                // Update pageCount based on the response
+                pageCount = tempResponse.Pageination.LastVisiblePage;
+
+                pageNum++;
+            }
 
             return episodes;
         }
 
-        static public List<Picture> GetPictures(string animeId)
+        public static List<Episode> GetEpisodes(string animeId)
         {
-            var request = new RestRequest("anime/" + animeId + "/pictures", Method.GET);
-            var response = client.Execute(request);
-            var pictures = JsonConvert.DeserializeObject<PicturesList>(response.Content).Pictures;
-
-            return pictures;
+            return GetEpisodesAsync(animeId).GetAwaiter().GetResult();
         }
 
-        static public List<SearchResult> Search(string searchQuery)
+        static public AnimeData[] Search(string searchQuery)
         {
-            var request = new RestRequest("search/anime/", Method.GET);
+            var request = new RestRequest("anime", Method.Get);
             request.AddParameter("q", searchQuery);
             var response = client.Execute(request);
-            var results = JsonConvert.DeserializeObject<SearchResults>(response.Content).Results;
-
+            var results = JsonConvert.DeserializeObject<AnimeResponse>(response.Content).Data;
             return results;
         }
 
-        static public GeneralInfo GetInfo(string animeId)
+        static public AnimeGeneralInfo GetInfo(string animeId)
         {
-            var request = new RestRequest("anime/" + animeId, Method.GET);
+            var request = new RestRequest("anime/" + animeId, Method.Get);
             var response = client.Execute(request);
-            return JsonConvert.DeserializeObject<GeneralInfo>(response.Content);
+            return JsonConvert.DeserializeObject<AnimeGeneralInfo>(response.Content);
         }
     }
 }

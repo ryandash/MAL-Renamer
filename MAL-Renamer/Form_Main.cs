@@ -19,12 +19,12 @@ namespace MALRenamer
         static readonly Version currentVersion = new Version(1, 1, 0);
 
         List<Jikan.Episode> episodes;
-        Jikan.GeneralInfo info;
+        Jikan.AnimeGeneralInfo info;
         string[] fileEntries;
 
         private string GenerateFileName(int index, string fileExtension)
         {
-            if (fileEntries.Count() < index - 1)
+            if ((fileEntries.Count() - (2 - int.Parse(textBox_StartingEpisode.Text == "" ? "1" : textBox_StartingEpisode.Text))) < index - 1)
             {
                 return "Error: File count exceeds index!";
             }
@@ -32,7 +32,6 @@ namespace MALRenamer
             {
                 return "Error: Episodes count exceeds index!";
             }
-
 
             string title = "";
             if (radioButton_Title_Title.Checked)
@@ -129,12 +128,12 @@ namespace MALRenamer
                 ++fileEntryCount;
             }
 
-            if (enabledRowCount > episodes.Count + (1 - int.Parse(textBox_StartingEpisode.Text)))
+            if (enabledRowCount > episodes.Count + (1 - int.Parse(textBox_StartingEpisode.Text == "" ? "1" : textBox_StartingEpisode.Text)))
             {
                 return ValidationState.TooManyFiles;
             }
 
-            if (enabledRowCount < episodes.Count + (1 - int.Parse(textBox_StartingEpisode.Text)))
+            if (enabledRowCount < episodes.Count + (1 - int.Parse(textBox_StartingEpisode.Text == "" ? "1" : textBox_StartingEpisode.Text)))
             {
                 return ValidationState.TooManyEpisodes;
             }
@@ -158,7 +157,7 @@ namespace MALRenamer
                     episodeCount++;
                     enabledRowCount++;
                     row.Cells[1].Value = Path.GetFileName(fileEntries[fileEntryCount]);
-                    row.Cells[2].Value = GenerateFileName(episodeCount + int.Parse(textBox_StartingEpisode.Text == null ? "0" : textBox_StartingEpisode.Text), 
+                    row.Cells[2].Value = GenerateFileName(episodeCount + int.Parse(textBox_StartingEpisode.Text == "" ? "1" : textBox_StartingEpisode.Text), 
                         Path.GetExtension(fileEntries[fileEntryCount]));
                 } else
                 {
@@ -191,16 +190,16 @@ namespace MALRenamer
             await loadAnimeInfo();
             loading.Close();
 
-            textBox_Title_Default.Text = info.Title;
-            textBox_Title_English.Text = info.TitleEnglish;
-            textBox_Title_Japanese.Text = info.TitleJapanese;
+            textBox_Title_Default.Text = info.Data.Title;
+            textBox_Title_English.Text = info.Data.TitleEnglish;
+            textBox_Title_Japanese.Text = info.Data.TitleJapanese;
 
-            if (episodes.Count == 0)
+            if (episodes == null || episodes.Count == 0)
             {
-                if (info.EpisodeCount > 0)
+                if ((int)info.Data.EpisodeCount > 0)
                 {
                     //Populate with fake data
-                    for (int i = 0; i < info.EpisodeCount; ++i)
+                    for (int i = 0; i < (int)info.Data.EpisodeCount; ++i)
                     {
                         var ep = new Jikan.Episode
                         {
@@ -223,11 +222,11 @@ namespace MALRenamer
                         "No Episodes Found!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
-            else if (episodes.Count != info.EpisodeCount)
+            else if (episodes.Count != (int)info.Data.EpisodeCount)
             {
                 //Even worse - there's some episode info, but not the full thing
                 List<Jikan.Episode> newEpList = new List<Jikan.Episode>();
-                for (int i = 0; i < info.EpisodeCount; ++i)
+                for (int i = 0; i < (int)info.Data.EpisodeCount; ++i)
                 {
                     var ep = new Jikan.Episode
                     {
@@ -260,11 +259,11 @@ namespace MALRenamer
                 info = Jikan.GetInfo(textBox_AnimeID.Text);
                 episodes = Jikan.GetEpisodes(textBox_AnimeID.Text);
 
-                if (info != null && info.ImageURL != null)
+                if (info != null && info.Data.Images.Jpg.ImageUrl != null)
                 {
                     using (System.Net.WebClient webClient = new System.Net.WebClient())
                     {
-                        using (Stream stream = webClient.OpenRead(info.ImageURL))
+                        using (Stream stream = webClient.OpenRead(info.Data.Images.Jpg.ImageUrl))
                         {
                             pictureBox1.Image = Image.FromStream(stream);
                         }
@@ -531,7 +530,7 @@ namespace MALRenamer
         {
             if (info != null)
             {
-                System.Diagnostics.Process.Start(info.URL);
+                System.Diagnostics.Process.Start(info.Data.URL);
             }
         }
 
