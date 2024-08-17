@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MALRenamer
+﻿namespace MALRenamer
 {
     public class ValidationState
     {
@@ -19,7 +13,7 @@ namespace MALRenamer
             Warning,
             Error
         }
-        
+
         public static ValidationState Good
         {
             get

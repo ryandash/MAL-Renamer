@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MALRenamer
 {
+    [System.Runtime.Versioning.SupportedOSPlatform("windows")]
     public partial class Form_CustomEdit : Form
     {
         private string originalFilename;

@@ -29,879 +29,924 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Edit = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Current = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Preview = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox_SourceFolder = new System.Windows.Forms.TextBox();
-            this.button_SourceFolder = new System.Windows.Forms.Button();
-            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.textBox_AnimeID = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button_GetAnimeInfo = new System.Windows.Forms.Button();
-            this.button_Rename = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton_Title_None = new System.Windows.Forms.RadioButton();
-            this.radioButton_Title_Jp = new System.Windows.Forms.RadioButton();
-            this.radioButton_Title_En = new System.Windows.Forms.RadioButton();
-            this.radioButton_Title_Title = new System.Windows.Forms.RadioButton();
-            this.textBox_Title_Default = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox_Title_English = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox_Title_Japanese = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox_BackupFiles = new System.Windows.Forms.CheckBox();
-            this.textBox_StartingEpisode = new System.Windows.Forms.TextBox();
-            this.textBox_SectionDivider = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.checkBox_IncludeEpisode = new System.Windows.Forms.CheckBox();
-            this.checkBox_IncludeSeason = new System.Windows.Forms.CheckBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton_Episodes_None = new System.Windows.Forms.RadioButton();
-            this.radioButton_Episodes_Jp = new System.Windows.Forms.RadioButton();
-            this.radioButton_Episodes_En = new System.Windows.Forms.RadioButton();
-            this.radioButton_Episodes_Default = new System.Windows.Forms.RadioButton();
-            this.textBox_Season = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox_Season_Suffix = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox_Season_Prefix = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox_Season_Digits = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox_Episode_Suffix = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox_Episode_Prefix = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox_Episode_Digits = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button_Refresh = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.presetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.seriesS00E00ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.seriesS00E00EpisodeTitleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.seriesS00E00ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.seriesS00E00EpisodeTitleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.episodeTitleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.projectGitHubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportABugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox_ReplaceInvalidCharacters = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox_AddExtraToEpisodes = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            dataGridView1 = new System.Windows.Forms.DataGridView();
+            Edit = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            Current = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            Preview = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            label1 = new System.Windows.Forms.Label();
+            textBox_SourceFolder = new System.Windows.Forms.TextBox();
+            button_SourceFolder = new System.Windows.Forms.Button();
+            folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            textBox_AnimeID = new System.Windows.Forms.TextBox();
+            label2 = new System.Windows.Forms.Label();
+            button_GetAnimeInfo = new System.Windows.Forms.Button();
+            button_Rename = new System.Windows.Forms.Button();
+            button1 = new System.Windows.Forms.Button();
+            groupBox1 = new System.Windows.Forms.GroupBox();
+            radioButton_Title_None = new System.Windows.Forms.RadioButton();
+            radioButton_Title_Jp = new System.Windows.Forms.RadioButton();
+            radioButton_Title_En = new System.Windows.Forms.RadioButton();
+            radioButton_Title_Title = new System.Windows.Forms.RadioButton();
+            textBox_Title_Default = new System.Windows.Forms.TextBox();
+            label3 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
+            textBox_Title_English = new System.Windows.Forms.TextBox();
+            label5 = new System.Windows.Forms.Label();
+            textBox_Title_Japanese = new System.Windows.Forms.TextBox();
+            label6 = new System.Windows.Forms.Label();
+            groupBox2 = new System.Windows.Forms.GroupBox();
+            textBox_AddExtraToEpisodes = new System.Windows.Forms.TextBox();
+            label17 = new System.Windows.Forms.Label();
+            textBox_ReplaceInvalidCharacters = new System.Windows.Forms.TextBox();
+            label11 = new System.Windows.Forms.Label();
+            checkBox_BackupFiles = new System.Windows.Forms.CheckBox();
+            textBox_StartingEpisode = new System.Windows.Forms.TextBox();
+            textBox_SectionDivider = new System.Windows.Forms.TextBox();
+            label9 = new System.Windows.Forms.Label();
+            label7 = new System.Windows.Forms.Label();
+            checkBox_IncludeEpisode = new System.Windows.Forms.CheckBox();
+            checkBox_IncludeSeason = new System.Windows.Forms.CheckBox();
+            groupBox3 = new System.Windows.Forms.GroupBox();
+            radioButton_Episodes_None = new System.Windows.Forms.RadioButton();
+            radioButton_Episodes_Jp = new System.Windows.Forms.RadioButton();
+            radioButton_Episodes_En = new System.Windows.Forms.RadioButton();
+            radioButton_Episodes_Default = new System.Windows.Forms.RadioButton();
+            textBox_Season = new System.Windows.Forms.TextBox();
+            label8 = new System.Windows.Forms.Label();
+            groupBox4 = new System.Windows.Forms.GroupBox();
+            textBox_Season_Suffix = new System.Windows.Forms.TextBox();
+            label13 = new System.Windows.Forms.Label();
+            textBox_Season_Prefix = new System.Windows.Forms.TextBox();
+            label12 = new System.Windows.Forms.Label();
+            textBox_Season_Digits = new System.Windows.Forms.TextBox();
+            label10 = new System.Windows.Forms.Label();
+            groupBox5 = new System.Windows.Forms.GroupBox();
+            textBox_Episode_Suffix = new System.Windows.Forms.TextBox();
+            label14 = new System.Windows.Forms.Label();
+            textBox_Episode_Prefix = new System.Windows.Forms.TextBox();
+            label15 = new System.Windows.Forms.Label();
+            textBox_Episode_Digits = new System.Windows.Forms.TextBox();
+            label16 = new System.Windows.Forms.Label();
+            button_Refresh = new System.Windows.Forms.Button();
+            pictureBox1 = new System.Windows.Forms.PictureBox();
+            menuStrip1 = new System.Windows.Forms.MenuStrip();
+            fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            presetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            seriesS00E00ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            seriesS00E00EpisodeTitleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            seriesS00E00ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            seriesS00E00EpisodeTitleToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            episodeTitleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            projectGitHubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            reportABugToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            checkForUpdatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
+            groupBox4.SuspendLayout();
+            groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Edit,
-            this.Current,
-            this.Preview});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 22);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1126, 599);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick_1);
-            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridView1_CellMouseDoubleClick);
-            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellValueChanged);
-            this.dataGridView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.DataGridView1_MouseClick);
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] { Edit, Current, Preview });
+            dataGridView1.Location = new System.Drawing.Point(20, 42);
+            dataGridView1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.Size = new System.Drawing.Size(1867, 522);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += UpdateGridEvent;
+            dataGridView1.CellMouseDoubleClick += DataGridView1_CellMouseDoubleClick;
+            dataGridView1.CellValueChanged += UpdateGridEvent;
+            dataGridView1.MouseClick += UpdateGridEvent;
             // 
             // Edit
             // 
-            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Name = "Edit";
-            this.Edit.Width = 31;
+            Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            Edit.HeaderText = "Edit";
+            Edit.MinimumWidth = 8;
+            Edit.Name = "Edit";
+            Edit.Width = 48;
             // 
             // Current
             // 
-            this.Current.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Current.HeaderText = "Current";
-            this.Current.Name = "Current";
+            Current.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            Current.HeaderText = "Current";
+            Current.MinimumWidth = 8;
+            Current.Name = "Current";
             // 
             // Preview
             // 
-            this.Preview.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Preview.HeaderText = "Preview";
-            this.Preview.Name = "Preview";
+            Preview.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            Preview.HeaderText = "Preview";
+            Preview.MinimumWidth = 8;
+            Preview.Name = "Preview";
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 627);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Source Folder";
+            label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(20, 576);
+            label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(121, 25);
+            label1.TabIndex = 1;
+            label1.Text = "Source Folder";
             // 
             // textBox_SourceFolder
             // 
-            this.textBox_SourceFolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_SourceFolder.Location = new System.Drawing.Point(12, 643);
-            this.textBox_SourceFolder.Name = "textBox_SourceFolder";
-            this.textBox_SourceFolder.Size = new System.Drawing.Size(382, 20);
-            this.textBox_SourceFolder.TabIndex = 2;
-            this.textBox_SourceFolder.TextChanged += new System.EventHandler(this.TextBox_SourceFolder_TextChanged);
+            textBox_SourceFolder.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            textBox_SourceFolder.Location = new System.Drawing.Point(20, 607);
+            textBox_SourceFolder.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBox_SourceFolder.Name = "textBox_SourceFolder";
+            textBox_SourceFolder.Size = new System.Drawing.Size(624, 31);
+            textBox_SourceFolder.TabIndex = 2;
+            textBox_SourceFolder.TextChanged += TextBox_SourceFolder_TextChanged;
             // 
             // button_SourceFolder
             // 
-            this.button_SourceFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_SourceFolder.Location = new System.Drawing.Point(400, 643);
-            this.button_SourceFolder.Name = "button_SourceFolder";
-            this.button_SourceFolder.Size = new System.Drawing.Size(23, 19);
-            this.button_SourceFolder.TabIndex = 3;
-            this.button_SourceFolder.Text = "...";
-            this.button_SourceFolder.UseVisualStyleBackColor = true;
-            this.button_SourceFolder.Click += new System.EventHandler(this.Button_SourceFolder_Click);
+            button_SourceFolder.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            button_SourceFolder.Location = new System.Drawing.Point(657, 607);
+            button_SourceFolder.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            button_SourceFolder.Name = "button_SourceFolder";
+            button_SourceFolder.Size = new System.Drawing.Size(38, 37);
+            button_SourceFolder.TabIndex = 3;
+            button_SourceFolder.Text = "...";
+            button_SourceFolder.UseVisualStyleBackColor = true;
+            button_SourceFolder.Click += Button_SourceFolder_Click;
             // 
             // folderBrowserDialog1
             // 
-            this.folderBrowserDialog1.RootFolder = System.Environment.SpecialFolder.MyComputer;
+            folderBrowserDialog1.RootFolder = System.Environment.SpecialFolder.MyComputer;
             // 
             // textBox_AnimeID
             // 
-            this.textBox_AnimeID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox_AnimeID.Location = new System.Drawing.Point(12, 693);
-            this.textBox_AnimeID.Name = "textBox_AnimeID";
-            this.textBox_AnimeID.Size = new System.Drawing.Size(61, 20);
-            this.textBox_AnimeID.TabIndex = 5;
-            this.textBox_AnimeID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_AnimeID_KeyPress);
+            textBox_AnimeID.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            textBox_AnimeID.Location = new System.Drawing.Point(20, 703);
+            textBox_AnimeID.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBox_AnimeID.Name = "textBox_AnimeID";
+            textBox_AnimeID.Size = new System.Drawing.Size(99, 31);
+            textBox_AnimeID.TabIndex = 5;
+            textBox_AnimeID.KeyPress += TextBox_AnimeID_KeyPress;
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 677);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Anime ID";
+            label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(20, 672);
+            label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(86, 25);
+            label2.TabIndex = 4;
+            label2.Text = "Anime ID";
             // 
             // button_GetAnimeInfo
             // 
-            this.button_GetAnimeInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button_GetAnimeInfo.Location = new System.Drawing.Point(190, 681);
-            this.button_GetAnimeInfo.Name = "button_GetAnimeInfo";
-            this.button_GetAnimeInfo.Size = new System.Drawing.Size(93, 32);
-            this.button_GetAnimeInfo.TabIndex = 6;
-            this.button_GetAnimeInfo.Text = "Manual Load";
-            this.button_GetAnimeInfo.UseVisualStyleBackColor = true;
-            this.button_GetAnimeInfo.Click += new System.EventHandler(this.Button_GetAnimeInfo_Click);
+            button_GetAnimeInfo.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            button_GetAnimeInfo.Location = new System.Drawing.Point(317, 680);
+            button_GetAnimeInfo.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            button_GetAnimeInfo.Name = "button_GetAnimeInfo";
+            button_GetAnimeInfo.Size = new System.Drawing.Size(155, 62);
+            button_GetAnimeInfo.TabIndex = 6;
+            button_GetAnimeInfo.Text = "Manual Load";
+            button_GetAnimeInfo.UseVisualStyleBackColor = true;
+            button_GetAnimeInfo.Click += Button_GetAnimeInfo_Click;
             // 
             // button_Rename
             // 
-            this.button_Rename.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Rename.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Rename.Location = new System.Drawing.Point(954, 946);
-            this.button_Rename.Name = "button_Rename";
-            this.button_Rename.Size = new System.Drawing.Size(183, 55);
-            this.button_Rename.TabIndex = 7;
-            this.button_Rename.Text = "Rename";
-            this.button_Rename.UseVisualStyleBackColor = true;
-            this.button_Rename.Click += new System.EventHandler(this.Button_Rename_Click);
+            button_Rename.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            button_Rename.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            button_Rename.Location = new System.Drawing.Point(1580, 1189);
+            button_Rename.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            button_Rename.Name = "button_Rename";
+            button_Rename.Size = new System.Drawing.Size(305, 106);
+            button_Rename.TabIndex = 7;
+            button_Rename.Text = "Rename";
+            button_Rename.UseVisualStyleBackColor = true;
+            button_Rename.Click += Button_Rename_Click;
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(83, 681);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(101, 32);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            button1.Location = new System.Drawing.Point(138, 680);
+            button1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(168, 62);
+            button1.TabIndex = 9;
+            button1.Text = "Search";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += Button1_Click;
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.radioButton_Title_None);
-            this.groupBox1.Controls.Add(this.radioButton_Title_Jp);
-            this.groupBox1.Controls.Add(this.radioButton_Title_En);
-            this.groupBox1.Controls.Add(this.radioButton_Title_Title);
-            this.groupBox1.Location = new System.Drawing.Point(681, 627);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(149, 119);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Title";
+            groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            groupBox1.Controls.Add(radioButton_Title_None);
+            groupBox1.Controls.Add(radioButton_Title_Jp);
+            groupBox1.Controls.Add(radioButton_Title_En);
+            groupBox1.Controls.Add(radioButton_Title_Title);
+            groupBox1.Location = new System.Drawing.Point(1125, 576);
+            groupBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            groupBox1.Size = new System.Drawing.Size(248, 229);
+            groupBox1.TabIndex = 10;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Title";
             // 
             // radioButton_Title_None
             // 
-            this.radioButton_Title_None.AutoSize = true;
-            this.radioButton_Title_None.Location = new System.Drawing.Point(7, 89);
-            this.radioButton_Title_None.Name = "radioButton_Title_None";
-            this.radioButton_Title_None.Size = new System.Drawing.Size(69, 17);
-            this.radioButton_Title_None.TabIndex = 3;
-            this.radioButton_Title_None.Text = "Omit Title";
-            this.radioButton_Title_None.UseVisualStyleBackColor = true;
-            this.radioButton_Title_None.CheckedChanged += new System.EventHandler(this.RadioButton_Title_None_CheckedChanged);
+            radioButton_Title_None.AutoSize = true;
+            radioButton_Title_None.Location = new System.Drawing.Point(12, 171);
+            radioButton_Title_None.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            radioButton_Title_None.Name = "radioButton_Title_None";
+            radioButton_Title_None.Size = new System.Drawing.Size(114, 29);
+            radioButton_Title_None.TabIndex = 3;
+            radioButton_Title_None.Text = "Omit Title";
+            radioButton_Title_None.UseVisualStyleBackColor = true;
+            radioButton_Title_None.CheckedChanged += UpdateGridEvent;
             // 
             // radioButton_Title_Jp
             // 
-            this.radioButton_Title_Jp.AutoSize = true;
-            this.radioButton_Title_Jp.Location = new System.Drawing.Point(7, 66);
-            this.radioButton_Title_Jp.Name = "radioButton_Title_Jp";
-            this.radioButton_Title_Jp.Size = new System.Drawing.Size(93, 17);
-            this.radioButton_Title_Jp.TabIndex = 2;
-            this.radioButton_Title_Jp.Text = "Use Japanese";
-            this.radioButton_Title_Jp.UseVisualStyleBackColor = true;
-            this.radioButton_Title_Jp.CheckedChanged += new System.EventHandler(this.RadioButton_Title_Jp_CheckedChanged);
+            radioButton_Title_Jp.AutoSize = true;
+            radioButton_Title_Jp.Location = new System.Drawing.Point(12, 127);
+            radioButton_Title_Jp.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            radioButton_Title_Jp.Name = "radioButton_Title_Jp";
+            radioButton_Title_Jp.Size = new System.Drawing.Size(142, 29);
+            radioButton_Title_Jp.TabIndex = 2;
+            radioButton_Title_Jp.Text = "Use Japanese";
+            radioButton_Title_Jp.UseVisualStyleBackColor = true;
+            radioButton_Title_Jp.CheckedChanged += UpdateGridEvent;
             // 
             // radioButton_Title_En
             // 
-            this.radioButton_Title_En.AutoSize = true;
-            this.radioButton_Title_En.Location = new System.Drawing.Point(7, 43);
-            this.radioButton_Title_En.Name = "radioButton_Title_En";
-            this.radioButton_Title_En.Size = new System.Drawing.Size(81, 17);
-            this.radioButton_Title_En.TabIndex = 1;
-            this.radioButton_Title_En.Text = "Use English";
-            this.radioButton_Title_En.UseVisualStyleBackColor = true;
-            this.radioButton_Title_En.CheckedChanged += new System.EventHandler(this.RadioButton_Title_En_CheckedChanged);
+            radioButton_Title_En.AutoSize = true;
+            radioButton_Title_En.Location = new System.Drawing.Point(12, 83);
+            radioButton_Title_En.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            radioButton_Title_En.Name = "radioButton_Title_En";
+            radioButton_Title_En.Size = new System.Drawing.Size(127, 29);
+            radioButton_Title_En.TabIndex = 1;
+            radioButton_Title_En.Text = "Use English";
+            radioButton_Title_En.UseVisualStyleBackColor = true;
+            radioButton_Title_En.CheckedChanged += UpdateGridEvent;
             // 
             // radioButton_Title_Title
             // 
-            this.radioButton_Title_Title.AutoSize = true;
-            this.radioButton_Title_Title.Checked = true;
-            this.radioButton_Title_Title.Location = new System.Drawing.Point(7, 20);
-            this.radioButton_Title_Title.Name = "radioButton_Title_Title";
-            this.radioButton_Title_Title.Size = new System.Drawing.Size(104, 17);
-            this.radioButton_Title_Title.TabIndex = 0;
-            this.radioButton_Title_Title.TabStop = true;
-            this.radioButton_Title_Title.Text = "Use Default Title";
-            this.radioButton_Title_Title.UseVisualStyleBackColor = true;
-            this.radioButton_Title_Title.CheckedChanged += new System.EventHandler(this.RadioButton_Title_Title_CheckedChanged);
+            radioButton_Title_Title.AutoSize = true;
+            radioButton_Title_Title.Checked = true;
+            radioButton_Title_Title.Location = new System.Drawing.Point(12, 38);
+            radioButton_Title_Title.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            radioButton_Title_Title.Name = "radioButton_Title_Title";
+            radioButton_Title_Title.Size = new System.Drawing.Size(165, 29);
+            radioButton_Title_Title.TabIndex = 0;
+            radioButton_Title_Title.TabStop = true;
+            radioButton_Title_Title.Text = "Use Default Title";
+            radioButton_Title_Title.UseVisualStyleBackColor = true;
+            radioButton_Title_Title.CheckedChanged += UpdateGridEvent;
             // 
             // textBox_Title_Default
             // 
-            this.textBox_Title_Default.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_Title_Default.Location = new System.Drawing.Point(12, 766);
-            this.textBox_Title_Default.Name = "textBox_Title_Default";
-            this.textBox_Title_Default.Size = new System.Drawing.Size(382, 20);
-            this.textBox_Title_Default.TabIndex = 12;
-            this.textBox_Title_Default.TextChanged += new System.EventHandler(this.TextBox_Title_Default_TextChanged);
+            textBox_Title_Default.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            textBox_Title_Default.Location = new System.Drawing.Point(20, 843);
+            textBox_Title_Default.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBox_Title_Default.Name = "textBox_Title_Default";
+            textBox_Title_Default.Size = new System.Drawing.Size(624, 31);
+            textBox_Title_Default.TabIndex = 12;
+            textBox_Title_Default.TextChanged += UpdateGridEvent;
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 750);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Default Title";
+            label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(20, 812);
+            label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(106, 25);
+            label3.TabIndex = 11;
+            label3.Text = "Default Title";
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Location = new System.Drawing.Point(12, 739);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(411, 2);
-            this.label4.TabIndex = 13;
+            label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            label4.Location = new System.Drawing.Point(20, 791);
+            label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(675, 4);
+            label4.TabIndex = 13;
             // 
             // textBox_Title_English
             // 
-            this.textBox_Title_English.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_Title_English.Location = new System.Drawing.Point(12, 814);
-            this.textBox_Title_English.Name = "textBox_Title_English";
-            this.textBox_Title_English.Size = new System.Drawing.Size(382, 20);
-            this.textBox_Title_English.TabIndex = 15;
-            this.textBox_Title_English.TextChanged += new System.EventHandler(this.TextBox_Title_English_TextChanged);
+            textBox_Title_English.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            textBox_Title_English.Location = new System.Drawing.Point(20, 935);
+            textBox_Title_English.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBox_Title_English.Name = "textBox_Title_English";
+            textBox_Title_English.Size = new System.Drawing.Size(624, 31);
+            textBox_Title_English.TabIndex = 15;
+            textBox_Title_English.TextChanged += UpdateGridEvent;
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 798);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "English Title";
+            label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label5.AutoSize = true;
+            label5.Location = new System.Drawing.Point(20, 905);
+            label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label5.Name = "label5";
+            label5.Size = new System.Drawing.Size(105, 25);
+            label5.TabIndex = 14;
+            label5.Text = "English Title";
             // 
             // textBox_Title_Japanese
             // 
-            this.textBox_Title_Japanese.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_Title_Japanese.Location = new System.Drawing.Point(12, 862);
-            this.textBox_Title_Japanese.Name = "textBox_Title_Japanese";
-            this.textBox_Title_Japanese.Size = new System.Drawing.Size(382, 20);
-            this.textBox_Title_Japanese.TabIndex = 17;
-            this.textBox_Title_Japanese.TextChanged += new System.EventHandler(this.TextBox_Title_Japanese_TextChanged);
+            textBox_Title_Japanese.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+            textBox_Title_Japanese.Location = new System.Drawing.Point(20, 1028);
+            textBox_Title_Japanese.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBox_Title_Japanese.Name = "textBox_Title_Japanese";
+            textBox_Title_Japanese.Size = new System.Drawing.Size(624, 31);
+            textBox_Title_Japanese.TabIndex = 17;
+            textBox_Title_Japanese.TextChanged += UpdateGridEvent;
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 846);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Japanese Title";
+            label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label6.AutoSize = true;
+            label6.Location = new System.Drawing.Point(20, 997);
+            label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(120, 25);
+            label6.TabIndex = 16;
+            label6.Text = "Japanese Title";
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.textBox_AddExtraToEpisodes);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.textBox_ReplaceInvalidCharacters);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.checkBox_BackupFiles);
-            this.groupBox2.Controls.Add(this.textBox_StartingEpisode);
-            this.groupBox2.Controls.Add(this.textBox_SectionDivider);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(836, 627);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(301, 244);
-            this.groupBox2.TabIndex = 18;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Advanced";
-            // 
-            // checkBox_BackupFiles
-            // 
-            this.checkBox_BackupFiles.AutoSize = true;
-            this.checkBox_BackupFiles.Location = new System.Drawing.Point(6, 167);
-            this.checkBox_BackupFiles.Name = "checkBox_BackupFiles";
-            this.checkBox_BackupFiles.Size = new System.Drawing.Size(175, 17);
-            this.checkBox_BackupFiles.TabIndex = 23;
-            this.checkBox_BackupFiles.Text = "Create backup before renaming";
-            this.checkBox_BackupFiles.UseVisualStyleBackColor = true;
-            // 
-            // textBox_StartingEpisode
-            // 
-            this.textBox_StartingEpisode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox_StartingEpisode.Location = new System.Drawing.Point(6, 82);
-            this.textBox_StartingEpisode.Name = "textBox_StartingEpisode";
-            this.textBox_StartingEpisode.Size = new System.Drawing.Size(79, 20);
-            this.textBox_StartingEpisode.TabIndex = 22;
-            this.textBox_StartingEpisode.Text = "1";
-            this.textBox_StartingEpisode.TextChanged += new System.EventHandler(this.TextBox_StartingEpisode_TextChanged);
-            // 
-            // textBox_SectionDivider
-            // 
-            this.textBox_SectionDivider.AccessibleDescription = "";
-            this.textBox_SectionDivider.Location = new System.Drawing.Point(6, 32);
-            this.textBox_SectionDivider.Name = "textBox_SectionDivider";
-            this.textBox_SectionDivider.Size = new System.Drawing.Size(79, 20);
-            this.textBox_SectionDivider.TabIndex = 1;
-            this.textBox_SectionDivider.Text = " - ";
-            this.textBox_SectionDivider.TextChanged += new System.EventHandler(this.TextBox_SectionDivider_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 66);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 13);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Starting Episode";
-            // 
-            // label7
-            // 
-            this.label7.AccessibleDescription = "";
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Section Divider";
-            // 
-            // checkBox_IncludeEpisode
-            // 
-            this.checkBox_IncludeEpisode.AutoSize = true;
-            this.checkBox_IncludeEpisode.Checked = true;
-            this.checkBox_IncludeEpisode.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_IncludeEpisode.Location = new System.Drawing.Point(7, 0);
-            this.checkBox_IncludeEpisode.Name = "checkBox_IncludeEpisode";
-            this.checkBox_IncludeEpisode.Size = new System.Drawing.Size(64, 17);
-            this.checkBox_IncludeEpisode.TabIndex = 24;
-            this.checkBox_IncludeEpisode.Text = "Episode";
-            this.checkBox_IncludeEpisode.UseVisualStyleBackColor = true;
-            this.checkBox_IncludeEpisode.CheckedChanged += new System.EventHandler(this.CheckBox_IncludeEpisode_CheckedChanged);
-            // 
-            // checkBox_IncludeSeason
-            // 
-            this.checkBox_IncludeSeason.AutoSize = true;
-            this.checkBox_IncludeSeason.Checked = true;
-            this.checkBox_IncludeSeason.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_IncludeSeason.Location = new System.Drawing.Point(7, 0);
-            this.checkBox_IncludeSeason.Name = "checkBox_IncludeSeason";
-            this.checkBox_IncludeSeason.Size = new System.Drawing.Size(62, 17);
-            this.checkBox_IncludeSeason.TabIndex = 23;
-            this.checkBox_IncludeSeason.Text = "Season";
-            this.checkBox_IncludeSeason.UseVisualStyleBackColor = true;
-            this.checkBox_IncludeSeason.CheckedChanged += new System.EventHandler(this.CheckBox_IncludeSeason_CheckedChanged);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.radioButton_Episodes_None);
-            this.groupBox3.Controls.Add(this.radioButton_Episodes_Jp);
-            this.groupBox3.Controls.Add(this.radioButton_Episodes_En);
-            this.groupBox3.Controls.Add(this.radioButton_Episodes_Default);
-            this.groupBox3.Location = new System.Drawing.Point(681, 752);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(149, 119);
-            this.groupBox3.TabIndex = 11;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Episodes";
-            // 
-            // radioButton_Episodes_None
-            // 
-            this.radioButton_Episodes_None.AutoSize = true;
-            this.radioButton_Episodes_None.Location = new System.Drawing.Point(7, 89);
-            this.radioButton_Episodes_None.Name = "radioButton_Episodes_None";
-            this.radioButton_Episodes_None.Size = new System.Drawing.Size(69, 17);
-            this.radioButton_Episodes_None.TabIndex = 3;
-            this.radioButton_Episodes_None.Text = "Omit Title";
-            this.radioButton_Episodes_None.UseVisualStyleBackColor = true;
-            this.radioButton_Episodes_None.CheckedChanged += new System.EventHandler(this.RadioButton_Episodes_None_CheckedChanged);
-            // 
-            // radioButton_Episodes_Jp
-            // 
-            this.radioButton_Episodes_Jp.AutoSize = true;
-            this.radioButton_Episodes_Jp.Location = new System.Drawing.Point(7, 66);
-            this.radioButton_Episodes_Jp.Name = "radioButton_Episodes_Jp";
-            this.radioButton_Episodes_Jp.Size = new System.Drawing.Size(93, 17);
-            this.radioButton_Episodes_Jp.TabIndex = 2;
-            this.radioButton_Episodes_Jp.Text = "Use Japanese";
-            this.radioButton_Episodes_Jp.UseVisualStyleBackColor = true;
-            this.radioButton_Episodes_Jp.CheckedChanged += new System.EventHandler(this.RadioButton_Episodes_Jp_CheckedChanged);
-            // 
-            // radioButton_Episodes_En
-            // 
-            this.radioButton_Episodes_En.AutoSize = true;
-            this.radioButton_Episodes_En.Location = new System.Drawing.Point(7, 43);
-            this.radioButton_Episodes_En.Name = "radioButton_Episodes_En";
-            this.radioButton_Episodes_En.Size = new System.Drawing.Size(81, 17);
-            this.radioButton_Episodes_En.TabIndex = 1;
-            this.radioButton_Episodes_En.Text = "Use English";
-            this.radioButton_Episodes_En.UseVisualStyleBackColor = true;
-            this.radioButton_Episodes_En.CheckedChanged += new System.EventHandler(this.RadioButton_Episodes_En_CheckedChanged);
-            // 
-            // radioButton_Episodes_Default
-            // 
-            this.radioButton_Episodes_Default.AutoSize = true;
-            this.radioButton_Episodes_Default.Checked = true;
-            this.radioButton_Episodes_Default.Location = new System.Drawing.Point(7, 20);
-            this.radioButton_Episodes_Default.Name = "radioButton_Episodes_Default";
-            this.radioButton_Episodes_Default.Size = new System.Drawing.Size(104, 17);
-            this.radioButton_Episodes_Default.TabIndex = 0;
-            this.radioButton_Episodes_Default.TabStop = true;
-            this.radioButton_Episodes_Default.Text = "Use Default Title";
-            this.radioButton_Episodes_Default.UseVisualStyleBackColor = true;
-            this.radioButton_Episodes_Default.CheckedChanged += new System.EventHandler(this.RadioButton_Episodes_Default_CheckedChanged);
-            // 
-            // textBox_Season
-            // 
-            this.textBox_Season.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox_Season.Location = new System.Drawing.Point(12, 910);
-            this.textBox_Season.Name = "textBox_Season";
-            this.textBox_Season.Size = new System.Drawing.Size(43, 20);
-            this.textBox_Season.TabIndex = 20;
-            this.textBox_Season.TextChanged += new System.EventHandler(this.TextBox_Season_TextChanged);
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 894);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 13);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "Season";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.textBox_Season_Suffix);
-            this.groupBox4.Controls.Add(this.checkBox_IncludeSeason);
-            this.groupBox4.Controls.Add(this.label13);
-            this.groupBox4.Controls.Add(this.textBox_Season_Prefix);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.textBox_Season_Digits);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Location = new System.Drawing.Point(681, 877);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(267, 59);
-            this.groupBox4.TabIndex = 21;
-            this.groupBox4.TabStop = false;
-            // 
-            // textBox_Season_Suffix
-            // 
-            this.textBox_Season_Suffix.Location = new System.Drawing.Point(155, 32);
-            this.textBox_Season_Suffix.Name = "textBox_Season_Suffix";
-            this.textBox_Season_Suffix.Size = new System.Drawing.Size(104, 20);
-            this.textBox_Season_Suffix.TabIndex = 30;
-            this.textBox_Season_Suffix.TextChanged += new System.EventHandler(this.TextBox_Season_Suffix_TextChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(155, 16);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(33, 13);
-            this.label13.TabIndex = 29;
-            this.label13.Text = "Suffix";
-            // 
-            // textBox_Season_Prefix
-            // 
-            this.textBox_Season_Prefix.Location = new System.Drawing.Point(6, 32);
-            this.textBox_Season_Prefix.Name = "textBox_Season_Prefix";
-            this.textBox_Season_Prefix.Size = new System.Drawing.Size(104, 20);
-            this.textBox_Season_Prefix.TabIndex = 28;
-            this.textBox_Season_Prefix.Text = "S";
-            this.textBox_Season_Prefix.TextChanged += new System.EventHandler(this.TextBox_Season_Prefix_TextChanged);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(33, 13);
-            this.label12.TabIndex = 27;
-            this.label12.Text = "Prefix";
-            // 
-            // textBox_Season_Digits
-            // 
-            this.textBox_Season_Digits.Location = new System.Drawing.Point(116, 32);
-            this.textBox_Season_Digits.Name = "textBox_Season_Digits";
-            this.textBox_Season_Digits.Size = new System.Drawing.Size(33, 20);
-            this.textBox_Season_Digits.TabIndex = 26;
-            this.textBox_Season_Digits.Text = "00";
-            this.textBox_Season_Digits.TextChanged += new System.EventHandler(this.TextBox_Season_Digits_TextChanged);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(116, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(33, 13);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Digits";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Controls.Add(this.checkBox_IncludeEpisode);
-            this.groupBox5.Controls.Add(this.textBox_Episode_Suffix);
-            this.groupBox5.Controls.Add(this.label14);
-            this.groupBox5.Controls.Add(this.textBox_Episode_Prefix);
-            this.groupBox5.Controls.Add(this.label15);
-            this.groupBox5.Controls.Add(this.textBox_Episode_Digits);
-            this.groupBox5.Controls.Add(this.label16);
-            this.groupBox5.Location = new System.Drawing.Point(681, 942);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(267, 59);
-            this.groupBox5.TabIndex = 31;
-            this.groupBox5.TabStop = false;
-            // 
-            // textBox_Episode_Suffix
-            // 
-            this.textBox_Episode_Suffix.Location = new System.Drawing.Point(155, 32);
-            this.textBox_Episode_Suffix.Name = "textBox_Episode_Suffix";
-            this.textBox_Episode_Suffix.Size = new System.Drawing.Size(104, 20);
-            this.textBox_Episode_Suffix.TabIndex = 30;
-            this.textBox_Episode_Suffix.TextChanged += new System.EventHandler(this.TextBox_Episode_Suffix_TextChanged);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(155, 16);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(33, 13);
-            this.label14.TabIndex = 29;
-            this.label14.Text = "Suffix";
-            // 
-            // textBox_Episode_Prefix
-            // 
-            this.textBox_Episode_Prefix.Location = new System.Drawing.Point(6, 32);
-            this.textBox_Episode_Prefix.Name = "textBox_Episode_Prefix";
-            this.textBox_Episode_Prefix.Size = new System.Drawing.Size(104, 20);
-            this.textBox_Episode_Prefix.TabIndex = 28;
-            this.textBox_Episode_Prefix.Text = "E";
-            this.textBox_Episode_Prefix.TextChanged += new System.EventHandler(this.TextBox_Episode_Prefix_TextChanged);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 16);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(33, 13);
-            this.label15.TabIndex = 27;
-            this.label15.Text = "Prefix";
-            // 
-            // textBox_Episode_Digits
-            // 
-            this.textBox_Episode_Digits.Location = new System.Drawing.Point(116, 32);
-            this.textBox_Episode_Digits.Name = "textBox_Episode_Digits";
-            this.textBox_Episode_Digits.Size = new System.Drawing.Size(33, 20);
-            this.textBox_Episode_Digits.TabIndex = 26;
-            this.textBox_Episode_Digits.Text = "00";
-            this.textBox_Episode_Digits.TextChanged += new System.EventHandler(this.TextBox_Episode_Digits_TextChanged);
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(116, 16);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(33, 13);
-            this.label16.TabIndex = 25;
-            this.label16.Text = "Digits";
-            // 
-            // button_Refresh
-            // 
-            this.button_Refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Refresh.Location = new System.Drawing.Point(954, 910);
-            this.button_Refresh.Name = "button_Refresh";
-            this.button_Refresh.Size = new System.Drawing.Size(183, 31);
-            this.button_Refresh.TabIndex = 32;
-            this.button_Refresh.Text = "Refresh Preview";
-            this.button_Refresh.UseVisualStyleBackColor = true;
-            this.button_Refresh.Click += new System.EventHandler(this.Button_Refresh_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(450, 627);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 309);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.presetsToolStripMenuItem,
-            this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1150, 24);
-            this.menuStrip1.TabIndex = 33;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "&File";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
-            this.exitToolStripMenuItem.Text = "E&xit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
-            // 
-            // presetsToolStripMenuItem
-            // 
-            this.presetsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.seriesS00E00ToolStripMenuItem,
-            this.seriesS00E00EpisodeTitleToolStripMenuItem,
-            this.seriesS00E00ToolStripMenuItem1,
-            this.seriesS00E00EpisodeTitleToolStripMenuItem1,
-            this.episodeTitleToolStripMenuItem});
-            this.presetsToolStripMenuItem.Name = "presetsToolStripMenuItem";
-            this.presetsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.presetsToolStripMenuItem.Text = "&Presets";
-            // 
-            // seriesS00E00ToolStripMenuItem
-            // 
-            this.seriesS00E00ToolStripMenuItem.Name = "seriesS00E00ToolStripMenuItem";
-            this.seriesS00E00ToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
-            this.seriesS00E00ToolStripMenuItem.Text = "Series - S00E00";
-            this.seriesS00E00ToolStripMenuItem.Click += new System.EventHandler(this.SeriesS00E00ToolStripMenuItem_Click);
-            // 
-            // seriesS00E00EpisodeTitleToolStripMenuItem
-            // 
-            this.seriesS00E00EpisodeTitleToolStripMenuItem.Name = "seriesS00E00EpisodeTitleToolStripMenuItem";
-            this.seriesS00E00EpisodeTitleToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
-            this.seriesS00E00EpisodeTitleToolStripMenuItem.Text = "Series - S00E00 - Episode Title";
-            this.seriesS00E00EpisodeTitleToolStripMenuItem.Click += new System.EventHandler(this.SeriesS00E00EpisodeTitleToolStripMenuItem_Click);
-            // 
-            // seriesS00E00ToolStripMenuItem1
-            // 
-            this.seriesS00E00ToolStripMenuItem1.Name = "seriesS00E00ToolStripMenuItem1";
-            this.seriesS00E00ToolStripMenuItem1.Size = new System.Drawing.Size(229, 22);
-            this.seriesS00E00ToolStripMenuItem1.Text = "Series [S00E00]";
-            this.seriesS00E00ToolStripMenuItem1.Click += new System.EventHandler(this.SeriesS00E00ToolStripMenuItem1_Click);
-            // 
-            // seriesS00E00EpisodeTitleToolStripMenuItem1
-            // 
-            this.seriesS00E00EpisodeTitleToolStripMenuItem1.Name = "seriesS00E00EpisodeTitleToolStripMenuItem1";
-            this.seriesS00E00EpisodeTitleToolStripMenuItem1.Size = new System.Drawing.Size(229, 22);
-            this.seriesS00E00EpisodeTitleToolStripMenuItem1.Text = "Series [S00E00] Episode Title";
-            this.seriesS00E00EpisodeTitleToolStripMenuItem1.Click += new System.EventHandler(this.SeriesS00E00EpisodeTitleToolStripMenuItem1_Click);
-            // 
-            // episodeTitleToolStripMenuItem
-            // 
-            this.episodeTitleToolStripMenuItem.Name = "episodeTitleToolStripMenuItem";
-            this.episodeTitleToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
-            this.episodeTitleToolStripMenuItem.Text = "00 - Episode Title";
-            this.episodeTitleToolStripMenuItem.Click += new System.EventHandler(this.EpisodeTitleToolStripMenuItem_Click);
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.projectGitHubToolStripMenuItem,
-            this.reportABugToolStripMenuItem,
-            this.checkForUpdatesToolStripMenuItem});
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
-            this.helpToolStripMenuItem.Text = "&Help";
-            // 
-            // projectGitHubToolStripMenuItem
-            // 
-            this.projectGitHubToolStripMenuItem.Name = "projectGitHubToolStripMenuItem";
-            this.projectGitHubToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.projectGitHubToolStripMenuItem.Text = "Project GitHub";
-            this.projectGitHubToolStripMenuItem.Click += new System.EventHandler(this.ProjectGitHubToolStripMenuItem_Click);
-            // 
-            // reportABugToolStripMenuItem
-            // 
-            this.reportABugToolStripMenuItem.Name = "reportABugToolStripMenuItem";
-            this.reportABugToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.reportABugToolStripMenuItem.Text = "Report A Bug";
-            this.reportABugToolStripMenuItem.Click += new System.EventHandler(this.ReportABugToolStripMenuItem_Click);
-            // 
-            // checkForUpdatesToolStripMenuItem
-            // 
-            this.checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
-            this.checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.checkForUpdatesToolStripMenuItem.Text = "Check For &Updates";
-            this.checkForUpdatesToolStripMenuItem.Click += new System.EventHandler(this.CheckForUpdatesToolStripMenuItem_Click);
-            // 
-            // textBox_ReplaceInvalidCharacters
-            // 
-            this.textBox_ReplaceInvalidCharacters.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox_ReplaceInvalidCharacters.Location = new System.Drawing.Point(6, 129);
-            this.textBox_ReplaceInvalidCharacters.Name = "textBox_ReplaceInvalidCharacters";
-            this.textBox_ReplaceInvalidCharacters.Size = new System.Drawing.Size(79, 20);
-            this.textBox_ReplaceInvalidCharacters.TabIndex = 25;
-            this.textBox_ReplaceInvalidCharacters.TextChanged += new System.EventHandler(this.textBox_ReplaceInvalidCharacters_TextChanged);
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 113);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(160, 13);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Replace Invalid Characters With";
+            groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            groupBox2.Controls.Add(textBox_AddExtraToEpisodes);
+            groupBox2.Controls.Add(label17);
+            groupBox2.Controls.Add(textBox_ReplaceInvalidCharacters);
+            groupBox2.Controls.Add(label11);
+            groupBox2.Controls.Add(checkBox_BackupFiles);
+            groupBox2.Controls.Add(textBox_StartingEpisode);
+            groupBox2.Controls.Add(textBox_SectionDivider);
+            groupBox2.Controls.Add(label9);
+            groupBox2.Controls.Add(label7);
+            groupBox2.Location = new System.Drawing.Point(1383, 576);
+            groupBox2.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            groupBox2.Size = new System.Drawing.Size(502, 469);
+            groupBox2.TabIndex = 18;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Advanced";
             // 
             // textBox_AddExtraToEpisodes
             // 
-            this.textBox_AddExtraToEpisodes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBox_AddExtraToEpisodes.Location = new System.Drawing.Point(115, 82);
-            this.textBox_AddExtraToEpisodes.Name = "textBox_AddExtraToEpisodes";
-            this.textBox_AddExtraToEpisodes.Size = new System.Drawing.Size(79, 20);
-            this.textBox_AddExtraToEpisodes.TabIndex = 27;
-            this.textBox_AddExtraToEpisodes.Text = "0";
-            this.textBox_AddExtraToEpisodes.TextChanged += new System.EventHandler(this.textBox_AddExtraToEpisodes_TextChanged);
+            textBox_AddExtraToEpisodes.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            textBox_AddExtraToEpisodes.Location = new System.Drawing.Point(192, 158);
+            textBox_AddExtraToEpisodes.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBox_AddExtraToEpisodes.Name = "textBox_AddExtraToEpisodes";
+            textBox_AddExtraToEpisodes.Size = new System.Drawing.Size(129, 31);
+            textBox_AddExtraToEpisodes.TabIndex = 27;
+            textBox_AddExtraToEpisodes.Text = "0";
+            textBox_AddExtraToEpisodes.TextChanged += textBox_AddExtraToEpisodes_TextChanged;
             // 
             // label17
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(115, 66);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(160, 13);
-            this.label17.TabIndex = 26;
-            this.label17.Text = "Add Extra Numbers To Episodes";
+            label17.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label17.AutoSize = true;
+            label17.Location = new System.Drawing.Point(192, 127);
+            label17.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label17.Name = "label17";
+            label17.Size = new System.Drawing.Size(266, 25);
+            label17.TabIndex = 26;
+            label17.Text = "Add Extra Numbers To Episodes";
+            // 
+            // textBox_ReplaceInvalidCharacters
+            // 
+            textBox_ReplaceInvalidCharacters.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            textBox_ReplaceInvalidCharacters.Location = new System.Drawing.Point(10, 248);
+            textBox_ReplaceInvalidCharacters.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBox_ReplaceInvalidCharacters.Name = "textBox_ReplaceInvalidCharacters";
+            textBox_ReplaceInvalidCharacters.Size = new System.Drawing.Size(129, 31);
+            textBox_ReplaceInvalidCharacters.TabIndex = 25;
+            textBox_ReplaceInvalidCharacters.TextChanged += UpdateGridEvent;
+            // 
+            // label11
+            // 
+            label11.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label11.AutoSize = true;
+            label11.Location = new System.Drawing.Point(10, 217);
+            label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(258, 25);
+            label11.TabIndex = 24;
+            label11.Text = "Replace Invalid Characters With";
+            // 
+            // checkBox_BackupFiles
+            // 
+            checkBox_BackupFiles.AutoSize = true;
+            checkBox_BackupFiles.Location = new System.Drawing.Point(10, 321);
+            checkBox_BackupFiles.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            checkBox_BackupFiles.Name = "checkBox_BackupFiles";
+            checkBox_BackupFiles.Size = new System.Drawing.Size(288, 29);
+            checkBox_BackupFiles.TabIndex = 23;
+            checkBox_BackupFiles.Text = "Create backup before renaming";
+            checkBox_BackupFiles.UseVisualStyleBackColor = true;
+            // 
+            // textBox_StartingEpisode
+            // 
+            textBox_StartingEpisode.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            textBox_StartingEpisode.Location = new System.Drawing.Point(10, 158);
+            textBox_StartingEpisode.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBox_StartingEpisode.Name = "textBox_StartingEpisode";
+            textBox_StartingEpisode.Size = new System.Drawing.Size(129, 31);
+            textBox_StartingEpisode.TabIndex = 22;
+            textBox_StartingEpisode.Text = "1";
+            textBox_StartingEpisode.TextChanged += UpdateGridEvent;
+            // 
+            // textBox_SectionDivider
+            // 
+            textBox_SectionDivider.AccessibleDescription = "";
+            textBox_SectionDivider.Location = new System.Drawing.Point(10, 62);
+            textBox_SectionDivider.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBox_SectionDivider.Name = "textBox_SectionDivider";
+            textBox_SectionDivider.Size = new System.Drawing.Size(129, 31);
+            textBox_SectionDivider.TabIndex = 1;
+            textBox_SectionDivider.Text = " - ";
+            textBox_SectionDivider.TextChanged += UpdateGridEvent;
+            // 
+            // label9
+            // 
+            label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label9.AutoSize = true;
+            label9.Location = new System.Drawing.Point(10, 127);
+            label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label9.Name = "label9";
+            label9.Size = new System.Drawing.Size(141, 25);
+            label9.TabIndex = 21;
+            label9.Text = "Starting Episode";
+            // 
+            // label7
+            // 
+            label7.AccessibleDescription = "";
+            label7.AutoSize = true;
+            label7.Location = new System.Drawing.Point(10, 31);
+            label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label7.Name = "label7";
+            label7.Size = new System.Drawing.Size(131, 25);
+            label7.TabIndex = 0;
+            label7.Text = "Section Divider";
+            // 
+            // checkBox_IncludeEpisode
+            // 
+            checkBox_IncludeEpisode.AutoSize = true;
+            checkBox_IncludeEpisode.Checked = true;
+            checkBox_IncludeEpisode.CheckState = System.Windows.Forms.CheckState.Checked;
+            checkBox_IncludeEpisode.Location = new System.Drawing.Point(12, 0);
+            checkBox_IncludeEpisode.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            checkBox_IncludeEpisode.Name = "checkBox_IncludeEpisode";
+            checkBox_IncludeEpisode.Size = new System.Drawing.Size(101, 29);
+            checkBox_IncludeEpisode.TabIndex = 24;
+            checkBox_IncludeEpisode.Text = "Episode";
+            checkBox_IncludeEpisode.UseVisualStyleBackColor = true;
+            checkBox_IncludeEpisode.CheckedChanged += CheckBox_IncludeEpisode_CheckedChanged;
+            // 
+            // checkBox_IncludeSeason
+            // 
+            checkBox_IncludeSeason.AutoSize = true;
+            checkBox_IncludeSeason.Checked = true;
+            checkBox_IncludeSeason.CheckState = System.Windows.Forms.CheckState.Checked;
+            checkBox_IncludeSeason.Location = new System.Drawing.Point(12, 0);
+            checkBox_IncludeSeason.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            checkBox_IncludeSeason.Name = "checkBox_IncludeSeason";
+            checkBox_IncludeSeason.Size = new System.Drawing.Size(95, 29);
+            checkBox_IncludeSeason.TabIndex = 23;
+            checkBox_IncludeSeason.Text = "Season";
+            checkBox_IncludeSeason.UseVisualStyleBackColor = true;
+            checkBox_IncludeSeason.CheckedChanged += CheckBox_IncludeSeason_CheckedChanged;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            groupBox3.Controls.Add(radioButton_Episodes_None);
+            groupBox3.Controls.Add(radioButton_Episodes_Jp);
+            groupBox3.Controls.Add(radioButton_Episodes_En);
+            groupBox3.Controls.Add(radioButton_Episodes_Default);
+            groupBox3.Location = new System.Drawing.Point(1125, 816);
+            groupBox3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            groupBox3.Size = new System.Drawing.Size(248, 229);
+            groupBox3.TabIndex = 11;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Episodes";
+            // 
+            // radioButton_Episodes_None
+            // 
+            radioButton_Episodes_None.AutoSize = true;
+            radioButton_Episodes_None.Location = new System.Drawing.Point(12, 171);
+            radioButton_Episodes_None.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            radioButton_Episodes_None.Name = "radioButton_Episodes_None";
+            radioButton_Episodes_None.Size = new System.Drawing.Size(114, 29);
+            radioButton_Episodes_None.TabIndex = 3;
+            radioButton_Episodes_None.Text = "Omit Title";
+            radioButton_Episodes_None.UseVisualStyleBackColor = true;
+            radioButton_Episodes_None.CheckedChanged += UpdateGridEvent;
+            // 
+            // radioButton_Episodes_Jp
+            // 
+            radioButton_Episodes_Jp.AutoSize = true;
+            radioButton_Episodes_Jp.Location = new System.Drawing.Point(12, 127);
+            radioButton_Episodes_Jp.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            radioButton_Episodes_Jp.Name = "radioButton_Episodes_Jp";
+            radioButton_Episodes_Jp.Size = new System.Drawing.Size(142, 29);
+            radioButton_Episodes_Jp.TabIndex = 2;
+            radioButton_Episodes_Jp.Text = "Use Japanese";
+            radioButton_Episodes_Jp.UseVisualStyleBackColor = true;
+            radioButton_Episodes_Jp.CheckedChanged += UpdateGridEvent;
+            // 
+            // radioButton_Episodes_En
+            // 
+            radioButton_Episodes_En.AutoSize = true;
+            radioButton_Episodes_En.Location = new System.Drawing.Point(12, 83);
+            radioButton_Episodes_En.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            radioButton_Episodes_En.Name = "radioButton_Episodes_En";
+            radioButton_Episodes_En.Size = new System.Drawing.Size(127, 29);
+            radioButton_Episodes_En.TabIndex = 1;
+            radioButton_Episodes_En.Text = "Use English";
+            radioButton_Episodes_En.UseVisualStyleBackColor = true;
+            radioButton_Episodes_En.CheckedChanged += UpdateGridEvent;
+            // 
+            // radioButton_Episodes_Default
+            // 
+            radioButton_Episodes_Default.AutoSize = true;
+            radioButton_Episodes_Default.Checked = true;
+            radioButton_Episodes_Default.Location = new System.Drawing.Point(12, 38);
+            radioButton_Episodes_Default.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            radioButton_Episodes_Default.Name = "radioButton_Episodes_Default";
+            radioButton_Episodes_Default.Size = new System.Drawing.Size(165, 29);
+            radioButton_Episodes_Default.TabIndex = 0;
+            radioButton_Episodes_Default.TabStop = true;
+            radioButton_Episodes_Default.Text = "Use Default Title";
+            radioButton_Episodes_Default.UseVisualStyleBackColor = true;
+            radioButton_Episodes_Default.CheckedChanged += UpdateGridEvent;
+            // 
+            // textBox_Season
+            // 
+            textBox_Season.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            textBox_Season.Location = new System.Drawing.Point(20, 1120);
+            textBox_Season.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBox_Season.Name = "textBox_Season";
+            textBox_Season.Size = new System.Drawing.Size(69, 31);
+            textBox_Season.TabIndex = 20;
+            textBox_Season.TextChanged += UpdateGridEvent;
+            // 
+            // label8
+            // 
+            label8.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left;
+            label8.AutoSize = true;
+            label8.Location = new System.Drawing.Point(20, 1089);
+            label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label8.Name = "label8";
+            label8.Size = new System.Drawing.Size(69, 25);
+            label8.TabIndex = 19;
+            label8.Text = "Season";
+            // 
+            // groupBox4
+            // 
+            groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            groupBox4.Controls.Add(textBox_Season_Suffix);
+            groupBox4.Controls.Add(checkBox_IncludeSeason);
+            groupBox4.Controls.Add(label13);
+            groupBox4.Controls.Add(textBox_Season_Prefix);
+            groupBox4.Controls.Add(label12);
+            groupBox4.Controls.Add(textBox_Season_Digits);
+            groupBox4.Controls.Add(label10);
+            groupBox4.Location = new System.Drawing.Point(1125, 1057);
+            groupBox4.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            groupBox4.Size = new System.Drawing.Size(445, 113);
+            groupBox4.TabIndex = 21;
+            groupBox4.TabStop = false;
+            // 
+            // textBox_Season_Suffix
+            // 
+            textBox_Season_Suffix.Location = new System.Drawing.Point(258, 62);
+            textBox_Season_Suffix.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBox_Season_Suffix.Name = "textBox_Season_Suffix";
+            textBox_Season_Suffix.Size = new System.Drawing.Size(171, 31);
+            textBox_Season_Suffix.TabIndex = 30;
+            textBox_Season_Suffix.TextChanged += UpdateGridEvent;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new System.Drawing.Point(258, 31);
+            label13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label13.Name = "label13";
+            label13.Size = new System.Drawing.Size(56, 25);
+            label13.TabIndex = 29;
+            label13.Text = "Suffix";
+            // 
+            // textBox_Season_Prefix
+            // 
+            textBox_Season_Prefix.Location = new System.Drawing.Point(10, 62);
+            textBox_Season_Prefix.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBox_Season_Prefix.Name = "textBox_Season_Prefix";
+            textBox_Season_Prefix.Size = new System.Drawing.Size(171, 31);
+            textBox_Season_Prefix.TabIndex = 28;
+            textBox_Season_Prefix.Text = "S";
+            textBox_Season_Prefix.TextChanged += UpdateGridEvent;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new System.Drawing.Point(10, 31);
+            label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label12.Name = "label12";
+            label12.Size = new System.Drawing.Size(55, 25);
+            label12.TabIndex = 27;
+            label12.Text = "Prefix";
+            // 
+            // textBox_Season_Digits
+            // 
+            textBox_Season_Digits.Location = new System.Drawing.Point(193, 62);
+            textBox_Season_Digits.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBox_Season_Digits.Name = "textBox_Season_Digits";
+            textBox_Season_Digits.Size = new System.Drawing.Size(52, 31);
+            textBox_Season_Digits.TabIndex = 26;
+            textBox_Season_Digits.Text = "00";
+            textBox_Season_Digits.TextChanged += UpdateGridEvent;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new System.Drawing.Point(193, 31);
+            label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label10.Name = "label10";
+            label10.Size = new System.Drawing.Size(58, 25);
+            label10.TabIndex = 25;
+            label10.Text = "Digits";
+            // 
+            // groupBox5
+            // 
+            groupBox5.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            groupBox5.Controls.Add(checkBox_IncludeEpisode);
+            groupBox5.Controls.Add(textBox_Episode_Suffix);
+            groupBox5.Controls.Add(label14);
+            groupBox5.Controls.Add(textBox_Episode_Prefix);
+            groupBox5.Controls.Add(label15);
+            groupBox5.Controls.Add(textBox_Episode_Digits);
+            groupBox5.Controls.Add(label16);
+            groupBox5.Location = new System.Drawing.Point(1125, 1182);
+            groupBox5.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            groupBox5.Size = new System.Drawing.Size(445, 113);
+            groupBox5.TabIndex = 31;
+            groupBox5.TabStop = false;
+            // 
+            // textBox_Episode_Suffix
+            // 
+            textBox_Episode_Suffix.Location = new System.Drawing.Point(258, 62);
+            textBox_Episode_Suffix.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBox_Episode_Suffix.Name = "textBox_Episode_Suffix";
+            textBox_Episode_Suffix.Size = new System.Drawing.Size(171, 31);
+            textBox_Episode_Suffix.TabIndex = 30;
+            textBox_Episode_Suffix.TextChanged += UpdateGridEvent;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new System.Drawing.Point(258, 31);
+            label14.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label14.Name = "label14";
+            label14.Size = new System.Drawing.Size(56, 25);
+            label14.TabIndex = 29;
+            label14.Text = "Suffix";
+            // 
+            // textBox_Episode_Prefix
+            // 
+            textBox_Episode_Prefix.Location = new System.Drawing.Point(10, 62);
+            textBox_Episode_Prefix.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBox_Episode_Prefix.Name = "textBox_Episode_Prefix";
+            textBox_Episode_Prefix.Size = new System.Drawing.Size(171, 31);
+            textBox_Episode_Prefix.TabIndex = 28;
+            textBox_Episode_Prefix.Text = "E";
+            textBox_Episode_Prefix.TextChanged += UpdateGridEvent;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new System.Drawing.Point(10, 31);
+            label15.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label15.Name = "label15";
+            label15.Size = new System.Drawing.Size(55, 25);
+            label15.TabIndex = 27;
+            label15.Text = "Prefix";
+            // 
+            // textBox_Episode_Digits
+            // 
+            textBox_Episode_Digits.Location = new System.Drawing.Point(193, 62);
+            textBox_Episode_Digits.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            textBox_Episode_Digits.Name = "textBox_Episode_Digits";
+            textBox_Episode_Digits.Size = new System.Drawing.Size(52, 31);
+            textBox_Episode_Digits.TabIndex = 26;
+            textBox_Episode_Digits.Text = "00";
+            textBox_Episode_Digits.TextChanged += UpdateGridEvent;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new System.Drawing.Point(193, 31);
+            label16.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            label16.Name = "label16";
+            label16.Size = new System.Drawing.Size(58, 25);
+            label16.TabIndex = 25;
+            label16.Text = "Digits";
+            // 
+            // button_Refresh
+            // 
+            button_Refresh.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            button_Refresh.Location = new System.Drawing.Point(1580, 1120);
+            button_Refresh.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            button_Refresh.Name = "button_Refresh";
+            button_Refresh.Size = new System.Drawing.Size(305, 60);
+            button_Refresh.TabIndex = 32;
+            button_Refresh.Text = "Refresh Preview";
+            button_Refresh.UseVisualStyleBackColor = true;
+            button_Refresh.Click += UpdateGridEvent;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right;
+            pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            pictureBox1.Location = new System.Drawing.Point(740, 576);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new System.Drawing.Size(375, 594);
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += PictureBox1_Click;
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { fileToolStripMenuItem, presetsToolStripMenuItem, helpToolStripMenuItem });
+            menuStrip1.Location = new System.Drawing.Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Padding = new System.Windows.Forms.Padding(10, 4, 0, 4);
+            menuStrip1.Size = new System.Drawing.Size(1907, 37);
+            menuStrip1.TabIndex = 33;
+            menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { exitToolStripMenuItem });
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
+            fileToolStripMenuItem.Text = "&File";
+            // 
+            // exitToolStripMenuItem
+            // 
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new System.Drawing.Size(141, 34);
+            exitToolStripMenuItem.Text = "E&xit";
+            exitToolStripMenuItem.Click += ExitToolStripMenuItem_Click;
+            // 
+            // presetsToolStripMenuItem
+            // 
+            presetsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { seriesS00E00ToolStripMenuItem, seriesS00E00EpisodeTitleToolStripMenuItem, seriesS00E00ToolStripMenuItem1, seriesS00E00EpisodeTitleToolStripMenuItem1, episodeTitleToolStripMenuItem });
+            presetsToolStripMenuItem.Name = "presetsToolStripMenuItem";
+            presetsToolStripMenuItem.Size = new System.Drawing.Size(84, 29);
+            presetsToolStripMenuItem.Text = "&Presets";
+            // 
+            // seriesS00E00ToolStripMenuItem
+            // 
+            seriesS00E00ToolStripMenuItem.Name = "seriesS00E00ToolStripMenuItem";
+            seriesS00E00ToolStripMenuItem.Size = new System.Drawing.Size(353, 34);
+            seriesS00E00ToolStripMenuItem.Text = "Series - S00E00";
+            seriesS00E00ToolStripMenuItem.Click += SeriesS00E00ToolStripMenuItem_Click;
+            // 
+            // seriesS00E00EpisodeTitleToolStripMenuItem
+            // 
+            seriesS00E00EpisodeTitleToolStripMenuItem.Name = "seriesS00E00EpisodeTitleToolStripMenuItem";
+            seriesS00E00EpisodeTitleToolStripMenuItem.Size = new System.Drawing.Size(353, 34);
+            seriesS00E00EpisodeTitleToolStripMenuItem.Text = "Series - S00E00 - Episode Title";
+            seriesS00E00EpisodeTitleToolStripMenuItem.Click += SeriesS00E00EpisodeTitleToolStripMenuItem_Click;
+            // 
+            // seriesS00E00ToolStripMenuItem1
+            // 
+            seriesS00E00ToolStripMenuItem1.Name = "seriesS00E00ToolStripMenuItem1";
+            seriesS00E00ToolStripMenuItem1.Size = new System.Drawing.Size(353, 34);
+            seriesS00E00ToolStripMenuItem1.Text = "Series [S00E00]";
+            seriesS00E00ToolStripMenuItem1.Click += SeriesS00E00ToolStripMenuItem1_Click;
+            // 
+            // seriesS00E00EpisodeTitleToolStripMenuItem1
+            // 
+            seriesS00E00EpisodeTitleToolStripMenuItem1.Name = "seriesS00E00EpisodeTitleToolStripMenuItem1";
+            seriesS00E00EpisodeTitleToolStripMenuItem1.Size = new System.Drawing.Size(353, 34);
+            seriesS00E00EpisodeTitleToolStripMenuItem1.Text = "Series [S00E00] Episode Title";
+            seriesS00E00EpisodeTitleToolStripMenuItem1.Click += SeriesS00E00EpisodeTitleToolStripMenuItem1_Click;
+            // 
+            // episodeTitleToolStripMenuItem
+            // 
+            episodeTitleToolStripMenuItem.Name = "episodeTitleToolStripMenuItem";
+            episodeTitleToolStripMenuItem.Size = new System.Drawing.Size(353, 34);
+            episodeTitleToolStripMenuItem.Text = "00 - Episode Title";
+            episodeTitleToolStripMenuItem.Click += EpisodeTitleToolStripMenuItem_Click;
+            // 
+            // helpToolStripMenuItem
+            // 
+            helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { projectGitHubToolStripMenuItem, reportABugToolStripMenuItem, checkForUpdatesToolStripMenuItem });
+            helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            helpToolStripMenuItem.Size = new System.Drawing.Size(65, 29);
+            helpToolStripMenuItem.Text = "&Help";
+            // 
+            // projectGitHubToolStripMenuItem
+            // 
+            projectGitHubToolStripMenuItem.Name = "projectGitHubToolStripMenuItem";
+            projectGitHubToolStripMenuItem.Size = new System.Drawing.Size(263, 34);
+            projectGitHubToolStripMenuItem.Text = "Project GitHub";
+            projectGitHubToolStripMenuItem.Click += ProjectGitHubToolStripMenuItem_Click;
+            // 
+            // reportABugToolStripMenuItem
+            // 
+            reportABugToolStripMenuItem.Name = "reportABugToolStripMenuItem";
+            reportABugToolStripMenuItem.Size = new System.Drawing.Size(263, 34);
+            reportABugToolStripMenuItem.Text = "Report A Bug";
+            reportABugToolStripMenuItem.Click += ReportABugToolStripMenuItem_Click;
+            // 
+            // checkForUpdatesToolStripMenuItem
+            // 
+            checkForUpdatesToolStripMenuItem.Name = "checkForUpdatesToolStripMenuItem";
+            checkForUpdatesToolStripMenuItem.Size = new System.Drawing.Size(263, 34);
+            checkForUpdatesToolStripMenuItem.Text = "Check For &Updates";
+            checkForUpdatesToolStripMenuItem.Click += CheckForUpdatesToolStripMenuItem_Click;
             // 
             // Form_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1150, 1014);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.button_Refresh);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.textBox_Season);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.textBox_Title_Japanese);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox_Title_English);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox_Title_Default);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button_Rename);
-            this.Controls.Add(this.button_GetAnimeInfo);
-            this.Controls.Add(this.textBox_AnimeID);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button_SourceFolder);
-            this.Controls.Add(this.textBox_SourceFolder);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.menuStrip1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(1166, 500);
-            this.Name = "Form_Main";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MAL Renamer";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            ClientSize = new System.Drawing.Size(1907, 1320);
+            Controls.Add(groupBox5);
+            Controls.Add(button_Refresh);
+            Controls.Add(groupBox4);
+            Controls.Add(textBox_Season);
+            Controls.Add(label8);
+            Controls.Add(groupBox3);
+            Controls.Add(groupBox2);
+            Controls.Add(textBox_Title_Japanese);
+            Controls.Add(label6);
+            Controls.Add(textBox_Title_English);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(textBox_Title_Default);
+            Controls.Add(label3);
+            Controls.Add(groupBox1);
+            Controls.Add(button1);
+            Controls.Add(pictureBox1);
+            Controls.Add(button_Rename);
+            Controls.Add(button_GetAnimeInfo);
+            Controls.Add(textBox_AnimeID);
+            Controls.Add(label2);
+            Controls.Add(button_SourceFolder);
+            Controls.Add(textBox_SourceFolder);
+            Controls.Add(label1);
+            Controls.Add(dataGridView1);
+            Controls.Add(menuStrip1);
+            Icon = (System.Drawing.Icon)resources.GetObject("$this.Icon");
+            MainMenuStrip = menuStrip1;
+            Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            MinimumSize = new System.Drawing.Size(1929, 910);
+            Name = "Form_Main";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            Text = "MAL Renamer";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
+            groupBox5.ResumeLayout(false);
+            groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

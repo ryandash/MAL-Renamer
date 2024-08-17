@@ -1,23 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
+using System.Net.Http;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using System.Collections;
-using System.Text.RegularExpressions;
-using System.Net;
 
 namespace MALRenamer
 {
+
+    [System.Runtime.Versioning.SupportedOSPlatform("windows")]
     public partial class Form_Main : Form
     {
-        static readonly Version currentVersion = new Version(1, 1, 0);
-
         List<Jikan.Episode> episodes;
         Jikan.AnimeGeneralInfo info;
         string[] fileEntries;
@@ -50,7 +47,7 @@ namespace MALRenamer
             string season = "";
             if (checkBox_IncludeSeason.Checked)
             {
-                season = textBox_Season_Prefix.Text + 
+                season = textBox_Season_Prefix.Text +
                     int.Parse(textBox_Season.Text).ToString(textBox_Season_Digits.Text) +
                     textBox_Season_Suffix.Text;
             }
@@ -58,8 +55,8 @@ namespace MALRenamer
             string episode = "";
             if (checkBox_IncludeEpisode.Checked)
             {
-                episode = textBox_Episode_Prefix.Text + 
-                    (index + int.Parse(textBox_AddExtraToEpisodes.Text)).ToString(textBox_Episode_Digits.Text) + 
+                episode = textBox_Episode_Prefix.Text +
+                    (index + int.Parse(textBox_AddExtraToEpisodes.Text)).ToString(textBox_Episode_Digits.Text) +
                     textBox_Episode_Suffix.Text;
             }
 
@@ -92,7 +89,7 @@ namespace MALRenamer
 
         private bool IsKnownVideoFile(string extension)
         {
-            string[] formats = new [] { ".WEBM", ".MKV", ".MPG", ".MP2", ".MPEG", ".MPE", ".MPV", ".OGG", ".MP4", ".M4P", ".M4V", ".AVI", ".WMV", ".MOV", ".QT", ".FLV", ".SWF", ".AVCHD"};
+            string[] formats = new[] { ".WEBM", ".MKV", ".MPG", ".MP2", ".MPEG", ".MPE", ".MPV", ".OGG", ".MP4", ".M4P", ".M4V", ".AVI", ".WMV", ".MOV", ".QT", ".FLV", ".SWF", ".AVCHD" };
             return formats.Contains(extension, StringComparer.OrdinalIgnoreCase);
         }
 
@@ -157,9 +154,10 @@ namespace MALRenamer
                     episodeCount++;
                     enabledRowCount++;
                     row.Cells[1].Value = Path.GetFileName(fileEntries[fileEntryCount]);
-                    row.Cells[2].Value = GenerateFileName(episodeCount + int.Parse(textBox_StartingEpisode.Text == "" ? "1" : textBox_StartingEpisode.Text), 
+                    row.Cells[2].Value = GenerateFileName(episodeCount + int.Parse(textBox_StartingEpisode.Text == "" ? "1" : textBox_StartingEpisode.Text),
                         Path.GetExtension(fileEntries[fileEntryCount]));
-                } else
+                }
+                else
                 {
                     row.Cells[1].Value = Path.GetFileName(fileEntries[fileEntryCount]);
                     row.Cells[2].Value = Path.GetFileName(fileEntries[fileEntryCount]);
@@ -170,7 +168,7 @@ namespace MALRenamer
 
             var valid = SafetyCheck();
             if (valid.Type == ValidationState.ErrorType.NoIssues)
-            { 
+            {
                 button_Rename.BackColor = SystemColors.Control;
             }
             else if (valid.Type == ValidationState.ErrorType.Warning)
@@ -208,7 +206,7 @@ namespace MALRenamer
                         };
                         episodes.Add(ep);
                     }
-                    
+
                     MessageBox.Show("Sorry, MAL has no details about the episodes in this series, apart from number of episodes. (Can't include episode titles!)",
                     "No Episode Details Found!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
@@ -261,9 +259,9 @@ namespace MALRenamer
 
                 if (info != null && info.Data.Images.Jpg.ImageUrl != null)
                 {
-                    using (System.Net.WebClient webClient = new System.Net.WebClient())
+                    using (HttpClient webClient = new HttpClient())
                     {
-                        using (Stream stream = webClient.OpenRead(info.Data.Images.Jpg.ImageUrl))
+                        using (Stream stream = webClient.GetStreamAsync(info.Data.Images.Jpg.ImageUrl).Result)
                         {
                             pictureBox1.Image = Image.FromStream(stream);
                         }
@@ -383,7 +381,6 @@ namespace MALRenamer
             _ = GetAnimeInfoAsync();
         }
 
-
         private bool ValidateFilesAccess()
         {
             int fileEntryCount = 0;
@@ -442,7 +439,7 @@ namespace MALRenamer
 
             if (!ValidateFilesAccess())
             {
-                MessageBox.Show("Error! Didn't have write access to one or more files! Activating secret technique of running away! (No files have been modified)", 
+                MessageBox.Show("Error! Didn't have write access to one or more files! Activating secret technique of running away! (No files have been modified)",
                     "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -539,18 +536,18 @@ namespace MALRenamer
             string title = "";
             if (radioButton_Title_Title.Checked)
             {
-                title = textBox_Title_Default.Text + textBox_SectionDivider.Text;
+                title = textBox_Title_Default.Text;
             }
             else if (radioButton_Title_En.Checked)
             {
-                title = textBox_Title_English.Text + textBox_SectionDivider.Text;
+                title = textBox_Title_English.Text;
             }
             else if (radioButton_Title_Jp.Checked)
             {
-                title = textBox_Title_Japanese.Text + textBox_SectionDivider.Text;
+                title = textBox_Title_Japanese.Text;
             }
 
-            using (var editForm = new Form_CustomEdit(fileEntries[e.RowIndex], title))
+            using (var editForm = new Form_CustomEdit(fileEntries[e.RowIndex], title + textBox_SectionDivider.Text))
             {
                 var result = editForm.ShowDialog();
                 if (result == DialogResult.OK)
@@ -560,127 +557,7 @@ namespace MALRenamer
             }
         }
 
-        private void DataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void DataGridView1_MouseClick(object sender, MouseEventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void Button_Refresh_Click(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void TextBox_Title_Default_TextChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void TextBox_Title_English_TextChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void TextBox_Title_Japanese_TextChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void TextBox_Season_TextChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void TextBox_SectionDivider_TextChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void TextBox_StartingEpisode_TextChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void TextBox_Season_Prefix_TextChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void TextBox_Season_Digits_TextChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void TextBox_Season_Suffix_TextChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void TextBox_Episode_Prefix_TextChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void TextBox_Episode_Digits_TextChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void TextBox_Episode_Suffix_TextChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void RadioButton_Title_Title_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void RadioButton_Title_En_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void RadioButton_Title_Jp_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void RadioButton_Title_None_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void RadioButton_Episodes_Default_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void RadioButton_Episodes_En_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void RadioButton_Episodes_Jp_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void RadioButton_Episodes_None_CheckedChanged(object sender, EventArgs e)
-        {
-            UpdateGrid();
-        }
-
-        private void textBox_ReplaceInvalidCharacters_TextChanged(object sender, EventArgs e)
+        private void UpdateGridEvent(object sender, EventArgs e)
         {
             UpdateGrid();
         }
@@ -787,12 +664,12 @@ namespace MALRenamer
 
         private void ProjectGitHubToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/software-2/MAL-Renamer");
+            System.Diagnostics.Process.Start("https://github.com/ryandash/MAL-Renamer");
         }
 
         private void ReportABugToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://github.com/software-2/MAL-Renamer/issues"); 
+            System.Diagnostics.Process.Start("https://github.com/ryandash/MAL-Renamer/issues");
         }
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -802,18 +679,20 @@ namespace MALRenamer
 
         private void CheckForUpdatesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var version = (new WebClient()).DownloadString("https://github.com/software-2/MAL-Renamer/raw/master/latestversion.txt");
+            var currentVersion = Version.Parse(File.ReadAllText("./latestVersion.txt").Trim());
+            var lastestVersion = (new HttpClient()).GetStringAsync("https://github.com/ryandash/MAL-Renamer/raw/master/MAL-Renamer/latestversion.txt").Result;
+
             try
             {
-                var parsed = Version.Parse(version);
-                
+                var parsed = Version.Parse(lastestVersion);
+
                 if (parsed.CompareTo(currentVersion) != 0)
                 {
-                    var dialog = "There is a new version! Want to go get it?\n\nYour Version: " + parsed.ToString() + "\n" + "New Version: " + currentVersion.ToString();
+                    var dialog = "There is a new version! Want to go get it?\n\nYour Version: " + currentVersion.ToString() + "\n" + "Latest Version: " + parsed.ToString();
                     var result = MessageBox.Show(dialog, "New Version!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                     if (result == DialogResult.Yes)
                     {
-                        System.Diagnostics.Process.Start("https://github.com/software-2/MAL-Renamer/releases");
+                        System.Diagnostics.Process.Start("https://github.com/ryandash/MAL-Renamer/releases");
                     }
                 }
                 else
@@ -826,7 +705,7 @@ namespace MALRenamer
                 var result = MessageBox.Show("Sorry, I couldn't find the version number. Do you want to go to the website to check?", "Error!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if (result == DialogResult.Yes)
                 {
-                    System.Diagnostics.Process.Start("https://github.com/software-2/MAL-Renamer/releases"); 
+                    System.Diagnostics.Process.Start("https://github.com/ryandash/MAL-Renamer/releases");
                 }
             }
         }
