@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net.Http;
 using System.Windows.Forms;
 
 namespace MALRenamer
 {
+    [System.Runtime.Versioning.SupportedOSPlatform("windows")]
     public partial class Form_Search : Form
     {
         Jikan.AnimeData[] searchResults;
@@ -41,7 +38,7 @@ namespace MALRenamer
         public Form_Search(string searchTerm)
         {
             InitializeComponent();
-            
+
             if (searchTerm.Length > 0)
             {
                 textBox_SearchTerm.Text = searchTerm;
@@ -66,9 +63,9 @@ namespace MALRenamer
             textBox_Synopsis.Text = searchResults[e.RowIndex].Synopsis;
 
 
-            using (System.Net.WebClient webClient = new System.Net.WebClient())
+            using (HttpClient webClient = new HttpClient())
             {
-                using (Stream stream = webClient.OpenRead(searchResults[e.RowIndex].Images.Jpg.ImageUrl))
+                using (Stream stream = webClient.GetStreamAsync(searchResults[e.RowIndex].Images.Jpg.ImageUrl).Result)
                 {
                     pictureBox1.Image = Image.FromStream(stream);
                 }

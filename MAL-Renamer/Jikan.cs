@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
 using RestSharp;
-using RestSharp.Authenticators;
-using Newtonsoft.Json;
-using System.Windows.Forms;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MALRenamer
 {
@@ -45,7 +41,7 @@ namespace MALRenamer
 
             [JsonProperty(PropertyName = "title_romanji")]
             public string TitleRO { get; set; }
-            
+
         }
 
         private class AnimeResponse
@@ -126,7 +122,7 @@ namespace MALRenamer
             [JsonProperty(PropertyName = "episodes")]
             private int? _episodeCount { get; set; }
 
-            public int EpisodeCount { get => _episodeCount ?? 0; set => _episodeCount=value; }
+            public int EpisodeCount { get => _episodeCount ?? 0; set => _episodeCount = value; }
         }
 
         static public async Task<List<Episode>> GetEpisodesAsync(string animeId)
